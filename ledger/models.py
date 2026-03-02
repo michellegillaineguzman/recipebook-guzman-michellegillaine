@@ -38,8 +38,8 @@ class Recipe(models.Model):
     def __str__(self):
         return self.name
 
-def get_absolute_url(self):
-    return reverse('ledger:recipe-detail', args=[self.pk])
+    def get_absolute_url(self):
+        return reverse('ledger:recipe-detail', args=[self.pk])
 
 
 class RecipeIngredient(models.Model):

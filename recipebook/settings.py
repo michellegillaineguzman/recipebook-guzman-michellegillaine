@@ -29,6 +29,10 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'ledger:recipe-list'
+LOGOUT_REDIRECT_URL = 'login'
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
