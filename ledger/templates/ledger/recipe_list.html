@@ -4,6 +4,11 @@
 
 {% block content %}
 <h2>Recipes</h2>
+
+{% if user.is_authenticated %}
+    <a href="{% url 'ledger:recipe-add' %}">+ Add New Recipe</a>
+{% endif %}
+
 <ul>
     {% for recipe in recipes %}
         <li>
